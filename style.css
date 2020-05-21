@@ -373,6 +373,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #twitterButton:active {
   background-color: #bbbbbb;
+  transition: 0s;
 }
 #twitterIcon {
   position: absolute;
