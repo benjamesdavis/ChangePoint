@@ -66,13 +66,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 #title-row {
   display: flex;
-  flex-direction: row
+  flex-direction: row;
+  margin-bottom: 13px;
 }
 #title {
   color: #2c3e50;
   font-size: 23px;
   font-family: "Bitter";
-  margin-bottom: 10px;
 }
 #subtitle {
   display: flex;
@@ -81,7 +81,6 @@ h1, h2, h3, h4, h5, h6 {
   /* color: #788b9f; */
   font-size: 18px;
   font-family: "Open Sans";
-  margin-bottom: 10px;
   margin-left: 8px
 }
 .intro {
@@ -350,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
 #cpCallout path {
     stroke-width: 1px;
 }
-#cpTimeCallout,#cpTimeSpeechDiv{
+#cpTimeCallout,#cpTimeSpeechDiv,#cpMagCallout,#cpMagSpeechDiv{
   animation: fadein 1s;
 }
 #segment-labels {
@@ -360,4 +359,36 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   background-color:#597086
   /* font-size: 15px: */
+}
+#twitterButton {
+  left: 700px;
+  border-radius: 5px;
+  transition: 0.4s;
+  width: 130px;
+  height: 30px;
+  position: absolute;
+}
+#twitterButton:hover {
+  background-color: #f0f0f0;
+}
+#twitterButton:active {
+  background-color: #bbbbbb;
+}
+#twitterIcon {
+  position: absolute;
+  top: 9%;
+  left: 6%;
+  /* top: 50%; */
+  /* width: 100%; */
+  height: 75%;
+  fill: #c2c2c2;
+}
+#twitterHandle {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  user-select: none;
+  font-family: Bitter;
+  font-size: 12;
+  color: #ababac;
 }
