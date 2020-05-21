@@ -356,6 +356,7 @@ stepTracker = function(){
   };
   nextStep();
 }
+stepTracker();
 
 stepSequencer = function(dict,scales){
 
@@ -1725,7 +1726,6 @@ cpLine = function(data,scales){
 showData = function(){
   dataGeneration();
   let scales = getScales(dict);
-  stepTracker();
   drawLine(combinedArray,scales);
   cusumHeights = [];
   cusumHeightsDict = [];
