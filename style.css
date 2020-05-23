@@ -397,3 +397,6 @@ h1, h2, h3, h4, h5, h6 {
 #twitterButton:active > #twitterHandle {
   color: #f7f8f9;
 }
+#step-cont {
+  animation: fadein 2s;
+}

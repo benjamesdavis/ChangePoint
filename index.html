@@ -356,12 +356,14 @@ stepTracker = function(){
   };
   nextStep();
 }
-setTimeout(stepTracker,200)
+setTimeout(stepTracker,400)
 
 stepSequencer = function(dict,scales){
 
   step = 1;
   trackedStep = 1;
+
+
   d3.select("#nextOverlay").on("click",function(){
 
     if (step == 1){
@@ -552,24 +554,27 @@ stepSequencer = function(dict,scales){
 drawLine = function(data,scales){
   let {xScale,yScale} = scales;
 
-   valueline = d3.line()
-    .x(function(d,i){return xScale(i)})
-    .y(d => yScale(d))
-
-
-  line = svg.append("g").attr("id","RL").append("path")
-          .datum(data)
-          .attr("d", valueline)
-          .attr("class","line")
-          lineTrans(line,4000,0)
-
-  /// Walk-through prompt card
   PageNum
     .append("text")
     .attr("text-anchor","middle")
     .text("1")
     .attr("dx",12)
     .attr("dy",22)
+
+   valueline = d3.line()
+    .x(function(d,i){return xScale(i)})
+    .y(d => yScale(d))
+
+  setTimeout(function(){
+    line = svg.append("g").attr("id","RL").append("path")
+            .datum(data)
+            .attr("d", valueline)
+            .attr("class","line")
+            lineTrans(line,4000,0)
+  },1000)
+
+
+  /// Walk-through prompt card
 
   AnnWindow
     .append("text").attr("class","ann1")
